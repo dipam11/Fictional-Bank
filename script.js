@@ -199,7 +199,7 @@ const updateUI = function (acc) {
 
 const startLogOutTimer = function () {
   const tick = function () {
-    const min = Math.trunc(time / 60).padStart(2, 0);
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
     const sec = String(time % 60).padStart(2, 0);
     //In each call,  print the remaining time to UI
     labelTimer.textContent = `${min}:${sec}`;
